@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+}
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	background-color: #5D4954;
+	font-family: 'Poppins', sans-serif;
+}
+body {
+	background-color:gainsboro;
+}
+.logo {
+	
+	background-image: linear-gradient(to right, #5d4954, #4a3a45, #382c36, #271e28, #18111a);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 40px;
+	font-weight: bolder;
+}
+h1 {
+  	background-image: linear-gradient(90deg, white 25%, #fde071 37.5%, #ef9671, #996a6e 62.5%, white 75%);
+  	background-position: right center;
+  	background-size: 400% auto;
+  	background-clip: text;
+  	color: white;
+  	-webkit-text-fill-color: transparent;
+  	transition: color 200ms linear;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 10rem;
+	font-weight: bolder;
+	font-family: 'Poppins', sans-serif;
+	margin-left: 40%;
+}
+h1:hover {
+	background-position: left center;
+	color: #ef9671;
+	transition: background-position 2000ms ease-out;
+  }
+ul {
+	display: flex;
+	justify-content: space-around;
+	width: 30%;
+}
+ul a {
+	color: rgb(226, 226, 226);
+	text-decoration: none;
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+ul li {
+	list-style: none;
+}
+.burger {
+	display: none;
+	cursor: pointer;
+}
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(226, 226, 226);
+	margin: 5px;
+	transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+	ul {
+		width: 60%;
+	}
+}
+@media screen and (max-width:768px) {
+	body {
+		overflow: hidden;
+	}
+	ul {
+		padding: 20px;
+		position: absolute;
+		right: 0px;
+		height: 92vh;
+		top: 8vh;
+		background-color: #5D4954;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		transform: translateX(100%);
+		transition: transform 0.5s ease-in;
+	}
+	li {
+		padding : 50px;
+	}
+	ul li {
+		opacity: 0;
+	}
+	.burger {
+		display: block;
+	}
+	.burger:focus-visible {
+		background-color: none;
+	}
+}
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translate(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translate(0px);
+	}
+}
+.toggle .line-1 {
+	transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line-2 {
+	opacity: 0;
+}
+.toggle .line-3 {
+	transform: rotate(45deg) translate(-5px,-6px);
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -44,7 +44,7 @@ img:not(.ballon){
 	animation-name: fly;
 	animation-duration: 10s;
 	animation-timing-function: ease-out;
-	animation-iteration-count: 1;
+	animation-iteration-count: infinite;
 }
 #pouet {
 	animation-timing-function: ease-in !important;

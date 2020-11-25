@@ -7,8 +7,11 @@ $email    = "";
 $errors = array(); 
 
 // On se connecte à la bdd
-$db = mysqli_connect('localhost', 'root', '', 'test');
-
+if(in_array($_SERVER['HTTP_HOST'], $hoster)){ // si dans l'array $_SERVER y'a l'un des truc local ça veut dire qu'on est en local
+    $mysqli = new mysqli("localhost", "root", "", "phoenix"); // la base de donné local
+}else{ // sinon on se connecte a la base de donnée externe aka la, alwaysdata
+    $mysqli = new mysqli("mysql-erylenn.alwaysdata.net", "erylenn", "Wbzder142wz@", "erylenn_phoenix");
+}
 // Enregistrement :)
 if (isset($_POST['reg_user'])) {
   // On recup les valeurs des inputs
